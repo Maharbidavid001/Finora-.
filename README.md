@@ -48,3 +48,71 @@ Click the **"Przejdź do wypłaty"** button to proceed with withdrawal.
 
 ## 📄 License
 This project is for educational/demo purposes.
+
+
+# 💸 Wypłata - ACC INWESTYCJA
+
+## 🧾 Withdrawal Form
+
+This page allows the user to enter withdrawal details after clicking **"Przejdź do wypłaty"**.
+
+---
+
+## 🖥️ UI Preview
+
+![Withdrawal Page](screenshot-withdrawal.png)
+
+---
+
+## ✨ Features
+- Input field for account number (empty by default)
+- Input field for user name (empty by default)
+- Bank selection dropdown (top Polish banks)
+- Display withdrawal amount
+- Action buttons: **Wypłać** and **Powrót**
+
+---
+
+## 🏦 Supported Banks (Poland)
+
+When the bank field is clicked, show:
+
+- PKO Bank Polski  
+- mBank  
+- ING Bank Śląski  
+- Santander Bank Polska  
+- Alior Bank  
+
+---
+
+## 📥 Form Fields
+
+| Field            | Description                     |
+|------------------|---------------------------------|
+| Account Number   | User enters bank account number |
+| Full Name        | User enters full name           |
+| Bank             | Select from dropdown            |
+| Amount           | 500,000 zł (fixed)              |
+
+---
+
+## ▶️ Example HTML
+
+```html id="form1"
+<input type="text" placeholder="Numer konta" />
+
+<input type="text" placeholder="Imię i nazwisko" />
+
+<select>
+  <option value="">Wybierz bank</option>
+  <option>PKO Bank Polski</option>
+  <option>mBank</option>
+  <option>ING Bank Śląski</option>
+  <option>Santander Bank Polska</option>
+  <option>Alior Bank</option>
+</select>
+
+<input type="text" value="500 000 zł" disabled />
+
+<button>Wypłać</button>
+<button>Powrót</button>
