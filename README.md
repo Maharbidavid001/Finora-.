@@ -1,7 +1,7 @@
 # 💰 ACC INWESTYCJA
 
 ## 👤 User
-**Aleksander Markowicz**
+**DOMINIKA JANICKA**
 
 ## 📈 Profit
 **500,000 zł**
