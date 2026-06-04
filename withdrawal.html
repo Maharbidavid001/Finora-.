@@ -59,37 +59,6 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 </script>
-  <body>
-
-  <input id="fullName" type="text" placeholder="Imię i nazwisko">
-
-  <button onclick="validateForm()">Wypłać</button>
-
-  <div id="popup">
-    ...
-  </div>
-
-  <script>
-    function validateForm() {
-      const name = document.getElementById("fullName").value.trim();
-
-      if (name !== "Dominika Janicka") {
-        alert("Nieprawidłowe imię i nazwisko.");
-        return;
-      }
-
-      openPopup();
-    }
-
-    function openPopup() {
-      document.getElementById("popup").style.display = "flex";
-    }
-
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
-  </script>
-
 </body>
 </body>
 </html>
