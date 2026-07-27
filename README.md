@@ -1,10 +1,10 @@
-# 💰 ACC INWESTYCJA
+# 💰UNHCR ACC INWESTYCJA
 
 ## 👤 User
-**DOMINIKA JANICKA**
+**Agnieszka Rusinek**
 
 ## 📈 Profit
-**500,000 zł**
+**50,000 zł**
 
 ---
 
