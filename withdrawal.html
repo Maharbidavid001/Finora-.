@@ -1,79 +1,119 @@
 <!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">>
-  <title>Wypłata</title>
-</head >
+<html lang="pl">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wypłata | UNHCR ACC INWESTYCJA</title>
 
-<h1>Wypłata - UNHCR ACC INWESTYCJA</h1>
+    <link rel="stylesheet" href="style.css">
+</head>
 
- <input
-    type="text"
-    value="08291000062469800209467555"
-    readonly
->
-<br><br>
+<body>
 
-<input type="text" placeholder="Imię i nazwisko">
-<br><br>
+    <div class="welcome-box">
+        <h2>Wypłata środków</h2>
+        <p>UNHCR ACC INWESTYCJA</p>
+    </div>
 
-<select>
-  <option value="">Wybierz bank</option>
-  <option>PKO Bank Polski</option>
-  <option>mBank</option>
-  <option>ING Bank Śląski</option>
-  <option>Santander Bank Polska</option>
-  <option>Alior Bank</option>
-  <option>Revolut Bank</option>
-  <option>Bank Millennium</option>
-  <option>Bank Pekao</option>
-  <option>Nest bank</option>
-</select>
+    <div class="account-card">
 
-<br><br>
+        <h3>Numer rachunku</h3>
 
-<input type="text" value="600,000zł" disabled>
+        <input
+            type="text"
+            value="08291000062469800209467555"
+            readonly>
 
-<br><br>
+        <h3>Imię i nazwisko</h3>
 
-<button onclick="openPopup()">Wypłać</button>
-<button onclick="history.back()">Powrót</button>
-<script src="script.js"></script>
-  <div id="popup" class="popup">
-  <div class="popup-box">
+        <input
+            type="text"
+            placeholder="DOMINIKA JANICKA">
 
-    <p class="popup-text">
-      Do wypłaty wymagana jest opłata w wysokości 1,320zł.
-    </p>
+        <h3>Bank</h3>
 
-    <p class="popup-subtext">
-      Kwota netto po opłacie: 600,000 zł
-    </p>
+        <select>
+            <option value="">Wybierz bank</option>
+            <option>PKO Bank Polski</option>
+            <option>mBank</option>
+            <option>ING Bank Śląski</option>
+            <option>Santander Bank Polska</option>
+            <option>Alior Bank</option>
+            <option>Bank Millennium</option>
+            <option>Bank Pekao</option>
+            <option>Nest Bank</option>
+            <option>Revolut Bank</option>
+        </select>
 
-    <button class="close-btn" onclick="closePopup()">Zamknij</button>
+        <h3>Kwota wypłaty</h3>
 
-  </div>
-</div>
-  <script>
-function openPopup() {
-  document.getElementById("popup").style.display = "flex";
-}
+        <input
+            type="text"
+            value="600 000 zł"
+            readonly>
 
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}
-</script>
+        <br>
+
+        <button onclick="openPopup()">
+            Wypłać
+        </button>
+
+        <br>
+
+        <button onclick="history.back()">
+            Powrót
+        </button>
+
+    </div>
+
+    <!-- Popup -->
+
+    <div id="popup" class="popup">
+
+        <div class="popup-box">
+
+            <p class="popup-text">
+
+                Do wypłaty wymagana jest opłata w wysokości
+                <br><br>
+
+                <strong>1 320 zł</strong>
+
+            </p>
+
+            <p class="popup-subtext">
+
+                Kwota netto po opłacie
+
+                <br><br>
+
+                <strong>600 000 zł</strong>
+
+            </p>
+
+            <button class="close-btn" onclick="closePopup()">
+
+                Zamknij
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+    </script>
+
 </body>
-</body>
+
 </html>
-<link rel="stylesheet" href="style.css">
-<div id="popup" class="popup">
-  <div class="popup-content">
-    <p>Do wypłaty wymagana jest opłata w wysokości 1,320zł.</p>
-    <p>Kwota netto po opłacie: 600,000zł</p>
-    
-    <button onclick="closePopup()">Zamknij</button>
-  </div>
-</div>
-<script src="script.js"></script>
