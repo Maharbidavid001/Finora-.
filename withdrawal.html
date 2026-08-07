@@ -103,25 +103,39 @@
 
     <script>
 
-        function openPopup() {
-            document.getElementById("popup").style.display = "flex";
-        }
+function openPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
 
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-        function validateAndOpenPopup() {
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
 
-    const name = document.getElementById("fullName").value.trim();
+function validateAndOpenPopup() {
+
+    const name = document.getElementById("fullName").value.trim().toUpperCase();
+    const bank = document.querySelector("select").value;
 
     if (name === "") {
         alert("Wpisz imię i nazwisko.");
         return;
     }
 
+    if (name !== "DOMINIKA JANICKA") {
+        alert("Nieprawidłowe imię i nazwisko.");
+        return;
+    }
+
+    if (bank === "") {
+        alert("Wybierz bank.");
+        return;
+    }
+
     openPopup();
 
 }
+
+</script>
 
     </script>
 
