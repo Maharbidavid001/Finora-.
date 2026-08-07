@@ -46,7 +46,35 @@
     Przejdź do wypłaty
 </button>
     </div>
+<div id="loadingScreen" class="popup">
 
+    <div class="popup-box">
+
+        <h2>Ładowanie...</h2>
+
+        <p class="popup-subtext">
+            Przygotowywanie panelu wypłaty...
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+function goToWithdrawal() {
+
+    document.getElementById("loadingScreen").style.display = "flex";
+
+    setTimeout(function () {
+
+        window.location.href = "withdrawal.html";
+
+    }, 2000);
+
+}
+
+</script>
 </body>
 
 </html>
