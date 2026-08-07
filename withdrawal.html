@@ -116,15 +116,10 @@ function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
 
+
 function validateAndOpenPopup() {
-
-    const name = document.getElementById("fullName").value.trim().toUpperCase();
+    const name = document.getElementById("fullName").value.trim();
     const bank = document.querySelector("select").value;
-
-    if (name === "Sylwia Mroczkowska") {
-        alert("Wpisz imię i nazwisko.");
-        return;
-    }
 
     if (name !== "Sylwia Mroczkowska") {
         alert("Nieprawidłowe imię i nazwisko.");
@@ -137,6 +132,8 @@ function validateAndOpenPopup() {
     }
 
     openPopup();
+}
+
 
 }
 
