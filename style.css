@@ -279,3 +279,59 @@ font-size:20px;
 }
 
 }
+.bank-header {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.bank-header p {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+.account-card {
+    width: 92%;
+    max-width: 430px;
+    margin: 20px auto;
+    padding: 25px;
+
+    background: rgba(10,25,45,0.60);
+
+    border: 2px solid #00ff99;
+    border-radius: 22px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 20px rgba(0,255,153,.35);
+}
+
+.balance-box {
+    margin: 20px 0;
+    padding: 20px;
+
+    background: rgba(255,255,255,.08);
+
+    border-radius: 18px;
+}
+
+.balance-box span {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+.balance-box h1 {
+    margin-top: 10px;
+    color: #00ff99;
+    font-size: 42px;
+}
+
+.status {
+    color: #00ff99;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.action-area {
+    text-align: center;
+    margin: 25px;
+}
