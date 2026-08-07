@@ -110,6 +110,18 @@
         function closePopup() {
             document.getElementById("popup").style.display = "none";
         }
+        function validateAndOpenPopup() {
+
+    const name = document.getElementById("fullName").value.trim();
+
+    if (name === "") {
+        alert("Wpisz imię i nazwisko.");
+        return;
+    }
+
+    openPopup();
+
+}
 
     </script>
 
