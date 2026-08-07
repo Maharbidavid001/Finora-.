@@ -1,135 +1,36 @@
-<!DOCTYPE html>
-<html lang="pl">
+<script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wypłata | UNHCR ACC INWESTYCJA</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+function openPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
 
-<body>
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
 
-    <div class="welcome-box">
-        <h2>Wypłata środków</h2>
-        <p>UNHCR ACC INWESTYCJA</p>
-    </div>
+function validateAndOpenPopup() {
 
-    <div class="account-card">
+    const name = document.getElementById("fullName").value.trim().toUpperCase();
 
-        <h3>Numer rachunku</h3>
+    const bank = document.querySelector("select").value;
 
-        <input
-            type="text"
-            value="08291000062469800209467555"
-            readonly>
+    if (name === "") {
+        alert("Wpisz imię i nazwisko.");
+        return;
+    }
 
-        <h3>Imię i nazwisko</h3>
+    if (name !== "DOMINIKA JANICKA") {
+        alert("Nieprawidłowe imię i nazwisko.");
+        return;
+    }
 
-        <input
-            type="text"
-            id="fullName"
-            placeholder="SYLWIA TESTOWA"
-            autocomplete="off">
+    if (bank === "") {
+        alert("Wybierz bank.");
+        return;
+    }
 
-        <h3>Bank</h3>
+    openPopup();
 
-        <select id="bank">
-            <option value="">Wybierz bank</option>
-            <option>PKO Bank Polski</option>
-            <option>mBank</option>
-            <option>ING Bank Śląski</option>
-            <option>Santander Bank Polska</option>
-            <option>Alior Bank</option>
-            <option>Bank Millennium</option>
-            <option>Bank Pekao</option>
-            <option>Nest Bank</option>
-            <option>Revolut Bank</option>
-        </select>
+}
 
-        <h3>Kwota wypłaty</h3>
-
-        <input
-            type="text"
-            value="600 000 zł"
-            readonly>
-
-        <br><br>
-
-        <button onclick="validateForm()">
-            Wypłać
-        </button>
-
-        <br><br>
-
-        <button onclick="window.location.href='index.html'">
-            Powrót
-        </button>
-
-    </div>
-
-    <!-- Popup -->
-
-    <div id="popup" class="popup">
-
-        <div class="popup-box">
-
-            <p class="popup-text">
-                Testowa wypłata została zatwierdzona.
-            </p>
-
-            <p class="popup-subtext">
-                To jest wersja demonstracyjna.
-            </p>
-
-            <button
-                class="close-btn"
-                onclick="closePopup()">
-                Zamknij
-            </button>
-
-        </div>
-
-    </div>
-
-    <script>
-
-        function openPopup() {
-            document.getElementById("popup").style.display = "flex";
-        }
-
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-
-        function validateForm() {
-
-            const name =
-                document.getElementById("fullName").value.trim();
-
-            const bank =
-                document.getElementById("bank").value;
-
-            if (name === "") {
-                alert("Wpisz imię i nazwisko.");
-                return;
-            }
-
-            if (name.toUpperCase() !== "SYLWIA TESTOWA") {
-                alert("Nieprawidłowe imię i nazwisko.");
-                return;
-            }
-
-            if (bank === "") {
-                alert("Wybierz bank.");
-                return;
-            }
-
-            openPopup();
-        }
-
-    </script>
-
-</body>
-
-</html>
+</script>
