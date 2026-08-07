@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wypłata | UNHCR ACC INWESTYCJA</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -22,19 +21,20 @@
 
         <input
             type="text"
-            value="42109027180000000136808835"
+            value="08291000062469800209467555"
             readonly>
 
         <h3>Imię i nazwisko</h3>
 
-       <input
-    type="text"
-    id="fullName"
-    placeholder="Sylwia Mroczkowska"> 
+        <input
+            type="text"
+            id="fullName"
+            placeholder="SYLWIA TESTOWA"
+            autocomplete="off">
 
         <h3>Bank</h3>
 
-        <select>
+        <select id="bank">
             <option value="">Wybierz bank</option>
             <option>PKO Bank Polski</option>
             <option>mBank</option>
@@ -45,29 +45,26 @@
             <option>Bank Pekao</option>
             <option>Nest Bank</option>
             <option>Revolut Bank</option>
-            <option>Bank Erste</option>
-            <option>BNP Paribas Bank Polska</option>
-            <option>Credit Agricole Bank Polska</option>
-            <option>VeloBank</option>
-            <option>Bank Pocztowy</option>
         </select>
 
         <h3>Kwota wypłaty</h3>
 
         <input
             type="text"
-            value="15,917zł"
+            value="600 000 zł"
             readonly>
 
-        <br>
+        <br><br>
 
-        <button onclick="validateAndOpenPopup()">
-    Wypłać
-</button>
+        <button onclick="validateForm()">
+            Wypłać
+        </button>
 
-        <br>
+        <br><br>
 
-        <button onclick="window.location.href='index.html'">Powrót</button>
+        <button onclick="window.location.href='index.html'">
+            Powrót
+        </button>
 
     </div>
 
@@ -78,28 +75,17 @@
         <div class="popup-box">
 
             <p class="popup-text">
-
-                Do wypłaty wymagana jest opłata w wysokości
-                <br><br>
-
-                <strong>850zł</strong>
-
+                Testowa wypłata została zatwierdzona.
             </p>
 
             <p class="popup-subtext">
-
-                Kwota netto po opłacie
-
-                <br><br>
-
-                <strong>15,917zł</strong>
-
+                To jest wersja demonstracyjna.
             </p>
 
-            <button class="close-btn" onclick="closePopup()">
-
+            <button
+                class="close-btn"
+                onclick="closePopup()">
                 Zamknij
-
             </button>
 
         </div>
@@ -108,54 +94,39 @@
 
     <script>
 
-function openPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
 
+        function validateForm() {
 
-function validateAndOpenPopup() {
-    const name = document.getElementById("fullName").value.trim();
-    const bank = document.querySelector("select").value;
+            const name =
+                document.getElementById("fullName").value.trim();
 
-    if (name !== "Sylwia Mroczkowska") {
-        alert("Nieprawidłowe imię i nazwisko.");
-        return;
-    }
+            const bank =
+                document.getElementById("bank").value;
 
-    if (bank === "") {
-        alert("Wybierz bank.");
-        return;
-    }
+            if (name === "") {
+                alert("Wpisz imię i nazwisko.");
+                return;
+            }
 
-    openPopup();
-}
+            if (name.toUpperCase() !== "SYLWIA TESTOWA") {
+                alert("Nieprawidłowe imię i nazwisko.");
+                return;
+            }
 
+            if (bank === "") {
+                alert("Wybierz bank.");
+                return;
+            }
 
-}
-
-</script>
-    <script>
-function validateAndOpenPopup() {
-    const name = document.getElementById("fullName").value.trim();
-    const bank = document.querySelector("select").value;
-
-    if (name !== "Sylwia Mroczkowska") {
-        alert("Nieprawidłowe imię i nazwisko.");
-        return;
-    }
-
-    if (bank === "") {
-        alert("Wybierz bank.");
-        return;
-    }
-
-    openPopup();
-}
-</script>
+            openPopup();
+        }
 
     </script>
 
