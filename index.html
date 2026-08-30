@@ -4,79 +4,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNHCR ACC INWESTYCJA</title>
+
+    <title>Finora — Konto demonstracyjne</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Welcome -->
-    <div class="welcome-box">
-        <h2>Witaj, Sylwia Mroczkowska!</h2>
-        <p>Miło Cię znowu widzieć.</p>
+    <div class="demo-banner">
+        WERSJA DEMONSTRACYJNA — TEST
     </div>
 
-    <!-- Logo / Title -->
-    <div class="bank-header">
-        <h1>UNHCR ACC INWESTYCJA</h1>
-        <p>Bezpieczne konto inwestycyjne</p>
-    </div>
-
-    <!-- Account Card -->
-    <div class="account-card">
-
-        <h3>Właściciel konta</h3>
-        <h2>Sylwia Mroczkowska</h2>
-
-        <div class="balance-box">
-            <span>Dostępne środki</span>
-            <h1>15,917zł</h1>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">F</div>
+            <div>
+                <strong>FINORA</strong>
+                <small>Banking Demo</small>
+            </div>
         </div>
 
-        <div class="status">
-            <p>● Konto aktywne</p>
-        </div>
+        <button class="menu-btn">☰</button>
+    </header>
 
-    </div>
+    <main>
 
-    <!-- Button -->
-    <div class="action-area">
-        <a href="withdrawal.html">
-            <button onclick="goToWithdrawal()">
-    Przejdź do wypłaty
-</button>
-    </div>
-<div id="loadingScreen" class="popup">
+        <section class="welcome">
+            <p>Dzień dobry</p>
+            <h1>Witaj, UŻYTKOWNIK</h1>
+        </section>
 
-    <div class="popup-box">
+        <section class="balance-card">
 
-        <h2>Ładowanie...</h2>
+            <div class="card-top">
+                <span>Główne konto</span>
+                <span class="status">● Aktywne</span>
+            </div>
 
-<div class="loader"></div>
+            <p>Dostępne środki</p>
 
-<p class="popup-subtext">
-    Przygotowywanie panelu wypłaty...
-</p>
+            <h2>14 000,00 zł</h2>
 
-    </div>
+            <div class="account-number">
+                Konto demonstracyjne
+            </div>
 
-</div>
+        </section>
 
-<script>
+        <section class="quick-actions">
 
-function goToWithdrawal() {
+            <h2>Szybkie działania</h2>
 
-    document.getElementById("loadingScreen").style.display = "flex";
+            <div class="actions">
 
-    setTimeout(function () {
+                <button>
+                    <span>↗</span>
+                    Przelew
+                </button>
 
-        window.location.href = "withdrawal.html";
+                <button>
+                    <span>＋</span>
+                    Wpłata
+                </button>
 
-    }, 2000);
+                <button>
+                    <span>−</span>
+                    Wypłata
+                </button>
 
-}
+                <button>
+                    <span>▣</span>
+                    Karty
+                </button>
 
-</script>
+            </div>
+
+        </section>
+
+        <section class="transactions">
+
+            <div class="section-header">
+                <h2>Ostatnie operacje</h2>
+                <span>Wszystkie</span>
+            </div>
+
+            <div class="transaction">
+                <div class="transaction-icon">↓</div>
+
+                <div class="transaction-info">
+                    <strong>Wpłata</strong>
+                    <small>Dzisiaj, 11:51</small>
+                </div>
+
+                <strong class="positive">
+                    +2 000,00 zł
+                </strong>
+            </div>
+
+            <div class="transaction">
+                <div class="transaction-icon">↗</div>
+
+                <div class="transaction-info">
+                    <strong>Przelew</strong>
+                    <small>Wczoraj, 15:20</small>
+                </div>
+
+                <strong>
+                    -850,00 zł
+                </strong>
+            </div>
+
+            <div class="transaction">
+                <div class="transaction-icon">▣</div>
+
+                <div class="transaction-info">
+                    <strong>Płatność kartą</strong>
+                    <small>28 sierpnia, 19:42</small>
+                </div>
+
+                <strong>
+                    -120,00 zł
+                </strong>
+            </div>
+
+        </section>
+
+        <section class="demo-note">
+            <strong>ℹ Konto demonstracyjne</strong>
+            <p>
+                Ta strona służy wyłącznie do testowania interfejsu.
+                Nie przedstawia rzeczywistego rachunku bankowego.
+            </p>
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+
+        <button>
+            <span>⌂</span>
+            Start
+        </button>
+
+        <button>
+            <span>↔</span>
+            Operacje
+        </button>
+
+        <button>
+            <span>▣</span>
+            Karty
+        </button>
+
+        <button>
+            <span>⋯</span>
+            Więcej
+        </button>
+
+    </nav>
+
 </body>
 
 </html>
