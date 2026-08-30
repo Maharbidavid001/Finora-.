@@ -338,6 +338,13 @@ main {
     background: #1d5ba5;
     color: #ffffff;
     margin-top: 2px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.withdraw-button:hover {
+    box-shadow: 0 6px 18px rgba(29, 91, 165, 0.25);
+    transform: translateY(-1px);
+}
 }
 
 .withdraw-button:active,
