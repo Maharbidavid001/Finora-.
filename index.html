@@ -4,53 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Finora — Konto demonstracyjne</title>
-
+    <title>Finora Banking</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="demo-banner">
-        WERSJA DEMONSTRACYJNA — TEST
-    </div>
-
     <header class="topbar">
+
         <div class="brand">
             <div class="brand-icon">F</div>
+
             <div>
                 <strong>FINORA</strong>
-                <small>Banking Demo</small>
+                <small>Banking</small>
             </div>
         </div>
 
-        <button class="menu-btn">☰</button>
+        <button class="menu-button">☰</button>
+
     </header>
+
 
     <main>
 
         <section class="welcome">
+
             <p>Dzień dobry</p>
-            <h1>Witaj,Paweł kopiec</h1>
+
+            <h1>Witaj, Paweł Kopiec</h1>
+
         </section>
+
 
         <section class="balance-card">
 
-            <div class="card-top">
-                <span>Główne konto</span>
-                <span class="status">● Aktywne</span>
+            <div class="balance-top">
+
+                <span>Konto główne</span>
+
+                <span class="account-status">
+                    ● Aktywne
+                </span>
+
             </div>
 
             <p>Dostępne środki</p>
 
-            <h2>14 000,00 zł</h2>
+            <h2>600 000,00 zł</h2>
 
             <div class="account-number">
-                Konto demonstracyjne
+                •••• •••• •••• 67555
             </div>
 
         </section>
+
 
         <section class="quick-actions">
 
@@ -68,10 +76,12 @@
                     Wpłata
                 </button>
 
-                <button>
-                    <span>−</span>
-                    Wypłata
-                </button>
+                <a href="withdrawal.html">
+                    <button>
+                        <span>−</span>
+                        Wypłata
+                    </button>
+                </a>
 
                 <button>
                     <span>▣</span>
@@ -82,65 +92,86 @@
 
         </section>
 
+
         <section class="transactions">
 
-            <div class="section-header">
+            <div class="section-title">
+
                 <h2>Ostatnie operacje</h2>
+
                 <span>Wszystkie</span>
+
             </div>
 
+
             <div class="transaction">
-                <div class="transaction-icon">↓</div>
+
+                <div class="transaction-icon">
+                    ↓
+                </div>
 
                 <div class="transaction-info">
+
                     <strong>Wpłata</strong>
+
                     <small>Dzisiaj, 11:51</small>
+
                 </div>
 
                 <strong class="positive">
                     +2 000,00 zł
                 </strong>
+
             </div>
 
+
             <div class="transaction">
-                <div class="transaction-icon">↗</div>
+
+                <div class="transaction-icon">
+                    ↗
+                </div>
 
                 <div class="transaction-info">
+
                     <strong>Przelew</strong>
+
                     <small>Wczoraj, 15:20</small>
+
                 </div>
 
                 <strong>
                     -850,00 zł
                 </strong>
+
             </div>
 
+
             <div class="transaction">
-                <div class="transaction-icon">▣</div>
+
+                <div class="transaction-icon">
+                    ▣
+                </div>
 
                 <div class="transaction-info">
+
                     <strong>Płatność kartą</strong>
+
                     <small>28 sierpnia, 19:42</small>
+
                 </div>
 
                 <strong>
                     -120,00 zł
                 </strong>
+
             </div>
 
         </section>
 
-        <section class="demo-note">
-            <strong>ℹ Konto demonstracyjne</strong>
-            <p>
-                Ta strona służy wyłącznie do testowania interfejsu.
-                Nie przedstawia rzeczywistego rachunku bankowego.
-            </p>
-        </section>
-
     </main>
 
-    <nav class="bottom-nav">
+
+    <nav class="bottom-navigation">
 
         <button>
             <span>⌂</span>
