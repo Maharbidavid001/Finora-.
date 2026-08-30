@@ -4,49 +4,51 @@
     padding: 0;
 }
 
-body {
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #172033;
-    padding-bottom: 85px;
+html {
+    width: 100%;
+    min-height: 100%;
 }
 
-.demo-banner {
-    background: #fff3cd;
-    color: #664d03;
-    text-align: center;
-    padding: 7px;
-    font-size: 12px;
-    font-weight: bold;
+body {
+    min-height: 100vh;
+    background: #f4f7fb;
+    color: #172033;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 90px;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
 }
 
 .topbar {
-    background: white;
-    padding: 16px 20px;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e6eaf0;
+    padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e7ebf2;
+    justify-content: space-between;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
 }
 
 .brand-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    background: #173b7a;
-    color: white;
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    background: #173f7a;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 21px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .brand strong {
@@ -56,16 +58,20 @@ body {
 }
 
 .brand small {
-    color: #7c8799;
+    display: block;
+    margin-top: 2px;
+    color: #8993a3;
     font-size: 11px;
 }
 
-.menu-btn {
+.menu-button {
+    width: 42px;
+    height: 42px;
     border: 0;
+    border-radius: 12px;
     background: #f1f4f8;
-    border-radius: 10px;
-    padding: 10px 13px;
-    font-size: 20px;
+    color: #172033;
+    font-size: 19px;
 }
 
 main {
@@ -75,121 +81,138 @@ main {
 }
 
 .welcome {
-    padding: 28px 4px 18px;
+    padding: 28px 3px 20px;
 }
 
 .welcome p {
-    color: #7a8495;
+    color: #7b8697;
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .welcome h1 {
     font-size: 25px;
+    line-height: 1.25;
 }
 
 .balance-card {
-    background: linear-gradient(135deg, #173b7a, #285ca8);
-    color: white;
-    border-radius: 22px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #173f7a, #2860aa);
+    border-radius: 23px;
     padding: 24px;
-    box-shadow: 0 12px 30px rgba(23, 59, 122, .22);
+    box-shadow: 0 12px 30px rgba(23, 63, 122, 0.22);
 }
 
-.card-top {
+.balance-top {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     font-size: 13px;
 }
 
-.status {
-    color: #b9ffd5;
+.account-status {
+    color: #b9ffd3;
 }
 
 .balance-card p {
-    margin-top: 30px;
-    opacity: .8;
+    margin-top: 31px;
+    color: rgba(255, 255, 255, 0.75);
     font-size: 13px;
 }
 
 .balance-card h2 {
     margin-top: 7px;
     font-size: 34px;
+    letter-spacing: -0.5px;
 }
 
 .account-number {
-    margin-top: 22px;
+    margin-top: 23px;
     padding-top: 14px;
-    border-top: 1px solid rgba(255,255,255,.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.72);
     font-size: 12px;
-    opacity: .75;
+    letter-spacing: 1px;
 }
 
 .quick-actions {
-    margin-top: 28px;
+    margin-top: 29px;
 }
 
 .quick-actions h2,
 .transactions h2 {
     font-size: 18px;
-    margin-bottom: 14px;
 }
 
 .actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+    margin-top: 14px;
+}
+
+.actions a {
+    text-decoration: none;
 }
 
 .actions button {
+    width: 100%;
+    min-height: 92px;
     border: 0;
-    background: white;
-    border-radius: 16px;
-    padding: 17px 10px;
+    border-radius: 17px;
+    background: #ffffff;
     color: #172033;
     font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,.06);
+    font-weight: 700;
+    box-shadow: 0 5px 18px rgba(20, 35, 60, 0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.actions button:active {
+    transform: scale(0.97);
 }
 
 .actions span {
     display: block;
-    color: #1c56a0;
-    font-size: 23px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
+    color: #1d5ba5;
+    font-size: 25px;
 }
 
 .transactions {
-    margin-top: 30px;
+    margin-top: 31px;
 }
 
-.section-header {
+.section-title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
 }
 
-.section-header span {
-    color: #1c56a0;
+.section-title span {
+    color: #1d5ba5;
     font-size: 12px;
 }
 
 .transaction {
-    background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 15px;
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(20, 35, 60, 0.04);
 }
 
 .transaction-icon {
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 41px;
+    flex: 0 0 41px;
     border-radius: 12px;
-    background: #eef4ff;
-    color: #1c56a0;
+    background: #edf4ff;
+    color: #1d5ba5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,6 +221,7 @@ main {
 
 .transaction-info {
     flex: 1;
+    min-width: 0;
 }
 
 .transaction-info strong {
@@ -207,55 +231,50 @@ main {
 
 .transaction-info small {
     display: block;
-    color: #8993a3;
     margin-top: 4px;
+    color: #8a94a4;
     font-size: 11px;
+}
+
+.transaction > strong {
+    font-size: 13px;
+    white-space: nowrap;
 }
 
 .positive {
     color: #159447;
-    font-size: 13px;
 }
 
-.demo-note {
-    background: white;
-    border-radius: 15px;
-    padding: 16px;
-    margin-top: 25px;
-    font-size: 12px;
-    color: #687386;
-}
-
-.demo-note strong {
-    display: block;
-    color: #344054;
-    margin-bottom: 6px;
-}
-
-.bottom-nav {
+.bottom-navigation {
     position: fixed;
+    z-index: 10;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    height: 70px;
-    background: white;
+    height: 72px;
+    background: #ffffff;
     border-top: 1px solid #e5e9ef;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
 }
 
-.bottom-nav button {
+.bottom-navigation button {
+    min-width: 60px;
     border: 0;
-    background: none;
+    background: transparent;
     color: #7d8797;
     font-size: 11px;
 }
 
-.bottom-nav span {
+.bottom-navigation button:first-child {
+    color: #1d5ba5;
+}
+
+.bottom-navigation span {
     display: block;
+    margin-bottom: 4px;
     font-size: 20px;
-    margin-bottom: 3px;
 }
 
 @media (min-width: 600px) {
