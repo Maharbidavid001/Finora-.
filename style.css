@@ -150,7 +150,16 @@ main {
 }
 
 .account-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
     color: #b9ffd3;
+    font-size: 11px;
+    white-space: nowrap;
+}
 }
 
 .balance-card p {
