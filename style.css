@@ -24,12 +24,17 @@ button {
 
 .topbar {
     width: 100%;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.97);
     border-bottom: 1px solid #e6eaf0;
-    padding: 15px 20px;
+    padding: 14px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(12px);
+}
 }
 
 .brand {
@@ -42,13 +47,15 @@ button {
     width: 43px;
     height: 43px;
     border-radius: 13px;
-    background: #173f7a;
+    background: linear-gradient(145deg, #173f7a, #2860aa);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 21px;
     font-weight: 700;
+    box-shadow: 0 5px 14px rgba(23, 63, 122, 0.22);
+}
 }
 
 .brand strong {
