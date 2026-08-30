@@ -102,7 +102,21 @@ main {
     padding: 24px;
     box-shadow: 0 12px 30px rgba(23, 63, 122, 0.22);
 }
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: pageFadeIn 0.45s ease-out;
+}
 .balance-top {
     display: flex;
     align-items: center;
