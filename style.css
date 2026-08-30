@@ -248,10 +248,18 @@ main {
     align-items: center;
     gap: 12px;
     margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 16px;
+    padding: 16px;
+    border-radius: 17px;
     background: #ffffff;
+    border: 1px solid #edf0f4;
     box-shadow: 0 4px 15px rgba(20, 35, 60, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.transaction:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 20px rgba(20, 35, 60, 0.07);
+}
 }
 
 .transaction-icon {
