@@ -149,7 +149,7 @@
                 <button
                     class="withdraw-button"
                     type="button"
-                    onclick="validateForm()">
+                    onclick="openpopup()">
 
                     Wypłać
 
@@ -173,6 +173,16 @@
 
 
     <script>
+
+function openPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+</script>
 
 
 </body>
