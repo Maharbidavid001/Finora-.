@@ -1,215 +1,304 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wypłata | Finora</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Wypłata | FINORA</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+        }
+        .topbar {
+            height: 70px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: #315fa8;
+            color: white;
+            font-weight: 800;
+        }
+        .menu-button {
+            border: 0;
+            background: transparent;
+            font-size: 24px;
+        }
+        .page {
+            padding: 25px 20px 100px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .page-title {
+            margin-bottom: 22px;
+        }
+        .page-title h1 {
+            margin: 0 0 7px;
+            font-size: 28px;
+        }
+        .page-title p {
+            margin: 0;
+            color: #667085;
+            font-size: 15px;
+        }
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(20, 35, 60, 0.08);
+        }
+        .field {
+            margin-bottom: 20px;
+        }
+        .field label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .field input,
+        .field select {
+            width: 100%;
+            height: 52px;
+            padding: 0 15px;
+            border: 1px solid #d0d5dd;
+            border-radius: 14px;
+            background: white;
+            color: #172033;
+            font-size: 16px;
+            outline: none;
+        }
+        .amount {
+            margin: 5px 0 22px;
+            padding: 18px;
+            border-radius: 18px;
+            background: #f4f7fb;
+        }
+        .amount small {
+            display: block;
+            margin-bottom: 7px;
+            color: #667085;
+        }
+        .amount strong {
+            font-size: 25px;
+        }
+        .withdraw-button {
+            width: 100%;
+            height: 52px;
+            border: 0;
+            border-radius: 14px;
+            background: #315fa8;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .back-button {
+            width: 100%;
+            height: 52px;
+            margin-top: 12px;
+            border: 1px solid #d0d5dd;
+            border-radius: 14px;
+            background: white;
+            color: #344054;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        /* HIDDEN POPUP CONTROL */
+        #popup-toggle {
+            display: none;
+        }
+        /* POPUP */
+        .popup {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.65);
+        }
+        #popup-toggle:checked + .popup {
+            display: flex;
+        }
+        .popup-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px 24px 24px;
+            background: white;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        }
+        .popup-icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef4ff;
+            color: #315fa8;
+            font-size: 28px;
+            font-weight: 800;
+        }
+        .popup-box h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+        .popup-box p {
+            margin: 0 0 24px;
+            color: #667085;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .close-button {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            border-radius: 14px;
+            background: #315fa8;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
-
 <body>
-
     <header class="topbar">
-
         <div class="brand">
             <div class="brand-icon">F</div>
-
-            <div>
-                <strong>FINORA</strong>
-                <small>Banking</small>
-            </div>
+            <span>FINORA</span>
         </div>
-
-        <button
-            class="menu-button"
-            onclick="window.location.href='index.html'">
-            ×
+        <button class="menu-button" type="button">
+            ☰
         </button>
-
     </header>
-
-
-    <main>
-
-        <section class="welcome">
-
-            <p>Operacja na koncie</p>
-
-            <h1>Wypłata środków</h1>
-
-        </section>
-
-
-        <section class="balance-card">
-
-            <div class="balance-top">
-                <span>Kwota dostępna</span>
-                <span class="account-status">● Aktywne</span>
+    <main class="page">
+        <div class="page-title">
+            <h1>Wypłata</h1>
+            <p>Przygotuj dane do wypłaty środków.</p>
+        </div>
+        <div class="card">
+            <div class="field">
+                <label for="account">
+                    Numer rachunku
+                </label>
+                <input
+                    id="account"
+                    type="text"
+                    value="•••• •••• •••• 4675"
+                    readonly>
             </div>
-
-            <h2>15 000,00 zł</h2>
-
-            <div class="account-number">
-                Konto główne
-            </div>
-
-        </section>
-
-
-        <section class="quick-actions">
-
-            <h2>Dane wypłaty</h2>
-
-            <div class="form-card">
-
-                <label for="fullName">
+            <div class="field">
+                <label for="name">
                     Imię i nazwisko
                 </label>
-
                 <input
+                    id="name"
                     type="text"
-                    id="fullName"
-                    placeholder="Wpisz imię i nazwisko"
-                    autocomplete="off">
-
-
+                    placeholder="Wpisz imię i nazwisko">
+            </div>
+            <div class="field">
                 <label for="bank">
                     Bank
                 </label>
-
                 <select id="bank">
-
                     <option value="">
                         Wybierz bank
                     </option>
-
                     <option>
                         PKO Bank Polski
                     </option>
-
                     <option>
                         mBank
                     </option>
-
                     <option>
                         ING Bank Śląski
                     </option>
-
                     <option>
                         Santander Bank Polska
                     </option>
-
                     <option>
                         Alior Bank
                     </option>
-
                     <option>
                         Bank Millennium
                     </option>
-
                     <option>
                         Bank Pekao
                     </option>
-
                     <option>
                         Nest Bank
                     </option>
-
-                    <option>
-                        Revolut Bank
-                    </option>
-                    
-                </option>
-                    BNP Paribas Bank polska
-                </option>
-
-                </option>
-                    Velo Bank
-                </option>
-
-                </option> 
-                    agricole bank 
-                </option>
-            
-
                 </select>
-
-
-                <label>
-                    Numer rachunku
-                </label>
-
-                <input
-                    type="text"
-                    value="6619 4010 7654 1102 3300 0000 000"
-                    readonly>
-
-
-                <button
-                    class="withdraw-button"
-                    type="button"
-                    onclick="openpopup()">
-
-                    Wypłać
-
-                </button>
-
-
-                <button
-                    class="back-button"
-                    type="button"
-                    onclick="window.location.href='index.html'">
-
-                    Powrót
-
-                </button>
-
             </div>
-
-        </section>
-
+            <div class="amount">
+                <small>Kwota wypłaty</small>
+                <strong>12 450,00 zł</strong>
+            </div>
+            <!-- OPEN POPUP -->
+            <label for="popup-toggle" class="withdraw-button">
+                Wypłać
+            </label>
+            <button
+                type="button"
+                class="back-button"
+                onclick="window.location.href='index.html'">
+                Powrót
+            </button>
+        </div>
     </main>
-</main>
-
-<div id="popup" class="popup">
-
-    <div class="popup-box">
-
-        <p class="popup-text">
-            Wypłata została przygotowana.
-        </p>
-
-        <p class="popup-subtext">
-            Sprawdź wprowadzone dane przed kontynuowaniem.
-        </p>
-
-        <button class="close-btn" onclick="closePopup()">
-            Zamknij
-        </button>
-
+    <!-- POPUP -->
+    <input type="checkbox" id="popup-toggle">
+    <div class="popup">
+        <div class="popup-box">
+            <div class="popup-icon">
+                ✓
+            </div>
+            <h2>
+                Wypłata przygotowana
+            </h2>
+            <p>
+                Dane wypłaty zostały przygotowane.
+                Sprawdź wprowadzone informacje przed kontynuowaniem.
+            </p>
+            <label for="popup-toggle" class="close-button">
+                Zamknij
+            </label>
+        </div>
     </div>
-
-</div>
-
-<script>
- <script>
-function openPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
-
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-
-function validateAndOpenPopup() {
-    openPopup();
-}
-</script>
-
-</script>
-
-
 </body>
-
 </html>
