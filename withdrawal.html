@@ -193,9 +193,7 @@
 </div>
 
 <script>
-
-    
-
+ <script>
 function openPopup() {
     document.getElementById("popup").style.display = "flex";
 }
@@ -205,21 +203,9 @@ function closePopup() {
 }
 
 function validateAndOpenPopup() {
-    const name = document.getElementById("fullName").value.trim();
-    const bank = document.getElementById("bank").value;
-
-    if (name === "") {
-        alert("Wpisz imię i nazwisko.");
-        return;
-    }
-
-    if (bank === "") {
-        alert("Wybierz bank.");
-        return;
-    }
-
     openPopup();
 }
+</script>
 
 </script>
 
